@@ -102,7 +102,7 @@ def main() -> None:
                                              #transform = transforms.Compose([transforms.Resize((256,256)),transforms.ToTensor()]),
                                              transform = transforms.Compose([transforms.ToTensor()]),
                                              download=True)
-    test_dataset .data = test_dataset.data[:128*5]
+#     test_dataset .data = test_dataset.data[:128*5]
     
     test_loader = torch.utils.data.DataLoader(dataset=test_dataset,
                                            batch_size=128, #该参数表示每次读取的批样本个数
