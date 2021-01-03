@@ -8,10 +8,10 @@
 # conda install pytorch  torchvision 
 
 
-pip install -r ../req.txt
+pip install -r ./req.txt
 ```
 
-## Training an image classifier
+## Train an image classifier
 * Load and normalizing the CIFAR10 training and test datasets using torchvision
 * Define a Convolutional Neural Network
 * Define a loss function
@@ -20,47 +20,27 @@ pip install -r ../req.txt
 
 
 ```
+#cd tutorial_yuhan
+CUDA_VISIBLE_DEVICES=0 python cifar10_tutorial.py
 
-cat experiments/base_model/params.yaml  
-# please 
+# please check the dataset root like "~/.torch/"
 ```
 
-* 2, start the train epoches 
+## Try the foolbox to generate the adversiral images 
 
 ```
-cd model_stealing
-sh run.sh 
+#cd tutorial_yuhan
+python foolbox1.py
 
+ls image/*
 ```
-
-## Params
-
-```
-
-```
-
-## Related Projects
-** [ACGAN](https://arxiv.org/abs/1610.09585)
-
-** [Knockoff Nets](https://openaccess.thecvf.com/content_CVPR_2019/papers/Orekondy_Knockoff_Nets_Stealing_Functionality_of_Black-Box_Models_CVPR_2019_paper.pdf) 
-
-** [Twin Auxiliary Classifiers GAN](https://papers.nips.cc/paper/2019/file/4ea06fbc83cdd0a06020c35d50e1e89a-Paper.pdf)
-
-** [MAZE](https://arxiv.org/pdf/2005.03161.pdf) 
-
-** [ES Attack](https://arxiv.org/abs/2009.09560) 
-
-
-
-
-
-## Acknowledgments
-
-
-Our code is inspired by [pytorch-cyclegan](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix).
  
 
-Our code is inspired by [pytorch-KD](https://github.com/peterliht/knowledge-distillation-pytorch).
+## Related Projects
+** [Foolbox](https://github.com/bethgelab/foolbox/blob/master/examples/single_attack_pytorch_resnet18.py)
+
+** [Cifar tutorial](https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html) 
+
 
 
 
