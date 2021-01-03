@@ -1,7 +1,6 @@
-#
-#The tutorial of foolbox and pytorch basic training . 
+# The tutorial of foolbox and pytorch basic training . 
 
-## Install and preparation 
+## Install the preparation 
 ```
 ## recommend starting from py37
 #conda create -n py37 python=3.7 
