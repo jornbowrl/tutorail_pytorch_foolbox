@@ -1,4 +1,4 @@
-# The tutorial of foolbox and basic training by pytorch. 
+# The tutorial of foolbox and basic training of pytorch. 
 
 ## Install the preparation 
 ```
